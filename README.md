@@ -1,2 +1,0 @@
-# ProductViewer
-Created with CodeSandbox

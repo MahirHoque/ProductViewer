@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Viewer Test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<div class="loader">
+		<div class="title">iPhone X</div>
+		<div class="subtitle">Think Different.</div>
+	</div>
+	<div class="infoContainer">
+		<div class="productInfo">
+			<div class="productName">iPhone X</div>
+
+			<div class="productSpec">6.1″ display</div>
+			<div class="productSpec">A12 Bionic chip</div>
+			<div class="productSpec">12MP wide-angle camera</div>
+			<div class="productSpec">4K video recording</div>
+		</div>
+
+		<button class="cta">Buy Now</button>
+    </div>
+		<div class="credits">Concept design only, I do not own any rights. Product by Apple. 3D Model by Jeremie P</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/93/three.min.js"></script>
+    <script src="https://rawgit.com/mrdoob/three.js/master/examples/js/loaders/ColladaLoader.js"></script>
+    <script src="https://rawgit.com/mrdoob/three.js/master/examples/js/controls/TrackballControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+
+    <script>
+				$(".infoContainer").hide();
+
+      $(document).ready(function() {
+        setTimeout(function() {
+					$(".infoContainer").fadeIn(500);
+					$(".loader").fadeOut(500);
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>

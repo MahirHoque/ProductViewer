@@ -1,0 +1,140 @@
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+}
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  background-color: #171717;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  animation: 0.5s ease-in-out both;
+  font-size: 14px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #171717;
+  animation: fade-in 0.5s ease;
+  color: #fff;
+  font-size: 32px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loader .title {
+  font-size: 2.3em;
+  color: #de44a1;
+  animation: fade-in 0.7s ease, slide-bottom 0.8s reverse ease-in-out;
+}
+
+.loader .subtitle {
+  font-size: 1.3em;
+  font-weight: 100;
+  animation: fade-in 1.9s ease 1s both;
+}
+
+.infoContainer {
+  position: absolute;
+  height: 100vh;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 7vw 20px 10vw;
+  animation: fade-in 0.7s ease, slide-bottom 0.5s reverse ease-in-out;
+  color: #fff;
+}
+.productName {
+  font-size: 3.3em;
+  font-weight: 700;
+}
+
+.infoContainer .productSpec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14% 0;
+  font-size: 1em;
+}
+
+.productSpec + .productSpec {
+  border-top: 1px solid #666;
+}
+
+.cta {
+  background: linear-gradient(#42a1ec, #0070c9);
+  color: #fff;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 0;
+}
+
+.credits {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8em;
+  align-items: center;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 1800px) {
+  .infoContainer {
+    padding: 20px 17vw;
+  }
+  .productName {
+    font-size: 4.3em;
+  }
+
+  .infoContainer .productSpec {
+    font-size: 1.7em;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    font-size: 0.6em;
+  }
+}
