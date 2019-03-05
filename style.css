@@ -62,7 +62,7 @@ body {
 .loader .title {
   font-size: 2.3em;
   color: #de44a1;
-  animation: fade-in 0.7s ease, slide-bottom 0.8s reverse ease-in-out;
+  animation: fade-in 1s ease both, slide-bottom 1s reverse ease-in-out;
 }
 
 .loader .subtitle {
@@ -136,5 +136,28 @@ body {
 @media only screen and (max-width: 1200px) {
   body {
     font-size: 0.6em;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .infoContainer {
+    position: absolute;
+    height: auto;
+    top: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30vw;
+    animation: fade-in 0.7s ease, slide-bottom 0.5s reverse ease-in-out;
+    color: #fff;
+  }
+  body {
+    height: auto;
+    overflow: visible;
+  }
+  .credits {
+    top: 0;
+    bottom: auto;
   }
 }
