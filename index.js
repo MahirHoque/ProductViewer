@@ -111,10 +111,7 @@ function loadCollada(collada) {
 }
 
 loader.options.convertUpAxis = true;
-loader.load(
-  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/392/iphone6.dae",
-  loadCollada
-);
+loader.load("phonemodel.dae", loadCollada);
 
 /*  This continuously renders the scene
 
